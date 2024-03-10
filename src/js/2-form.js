@@ -6,12 +6,20 @@ const textarea = document.querySelector("textarea");
 
 function formSubmitHandler(event) {
     event.preventDefault();
+    
+    if (input.value.trim() === "" || textarea.value.trim() === "") {
+        return alert(`All form fields must be filled in`);
+    } else {
+        localStorage.removeItem(STORAGE_KEY);
+    }
 
     const email = input.value.trim();
     const text = textarea.value.trim();
     const data = JSON.stringify({ email, text });
     console.log(data);
     localStorage.setItem(STORAGE_KEY, data);
+
+    event.currentTarget.reset();
 }
 
 form.addEventListener('submit', formSubmitHandler);
