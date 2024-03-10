@@ -1,0 +1,2 @@
+const o="feedback-form-state",t=document.querySelector(".feedback-form"),l=document.querySelector("textarea");function s(e){e.preventDefault();const n=t.elements.email.value,c=l.value,a=JSON.stringify({email:n,text:c});console.log(a),localStorage.setItem(o,a)}t.addEventListener("submit",s);const r=localStorage.getItem(o)??"";try{const e=JSON.parse(r);console.log(e),l.value=e.text,t.elements.email.value=e.email}catch{console.log("No save data!")}
+//# sourceMappingURL=2-form-937037f7.js.map
