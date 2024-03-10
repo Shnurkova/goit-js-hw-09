@@ -43,3 +43,8 @@ img {
     width: 900px;
     height: 660px;
 }
+
+.feedback-form > input{
+    display: flex;
+}
+
