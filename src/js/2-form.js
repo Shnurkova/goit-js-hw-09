@@ -6,5 +6,4 @@ const textarea = document.querySelector("textarea");
 
 function formSubmitHandler(event) {
     const text = textarea.value;
-    const email = 
 }
