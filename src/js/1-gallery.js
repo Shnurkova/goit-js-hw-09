@@ -64,15 +64,6 @@ const images = [
  },
 ];
 
-import SimpleLightbox from 'simplelightbox';
-import "simplelightbox/dist/simple-lightbox.min.css";
-
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-    
-});
-
-console.log(SimpleLightbox);
 const galleryUl = document.querySelector(".gallery");
 
 galleryUl.innerHTML = createMarkup(images)
@@ -98,3 +89,9 @@ function createMarkup(arr) {
     )
     .join("")
 }
+
+import SimpleLightbox from 'simplelightbox';
+import "simplelightbox/dist/simple-lightbox.min.css";
+
+const gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionsDelay: 250});
+gallery.on('show.simplelightbox');
