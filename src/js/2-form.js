@@ -32,4 +32,9 @@ function formSubmitHandler(event) {
     event.currentTarget.reset();
 }
 
+window.addEventListener('beforeunload', function(event) {
+    event.preventDefault();
+    localStorage.getItem(STORAGE_KEY);
+});
+
 form.addEventListener('submit', formSubmitHandler);
