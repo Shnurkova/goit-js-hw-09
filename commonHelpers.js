@@ -9,5 +9,5 @@ import"./assets/styles-bbca6adf.js";import{S as e}from"./assets/vendor-870f0eb5.
         />
         </a>
     </li>
-    `).join("")}const r=new e(".gallery a",{captionsData:"alt",captionsDelay:250});r.on("show.simplelightbox");
+    `).join("")}const r=new e(".gallery a",{captionsData:"alt",captionDelay:250});r.on("show.simplelightbox");
 //# sourceMappingURL=commonHelpers.js.map
